@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Monoton&family=Righteous&family=Shadows+Into+Light&display=swap");
+
+.logo {
+  font-family: "Monoton", cursive;
+  font-size: 2rem;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  border-bottom: 1px solid gray;
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.search__input {
+  width: 20%;
+  border: 1px solid gray;
+  padding: 0.3rem 1rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: rgb(244, 244, 244);
+}
+
+.fa-cart-shopping {
+  font-size: 1.5rem;
+}
+
+.cart__icon {
+  display: flex;
+  align-items: center;
+}
+
+.cart__count {
+  position: relative;
+  top: -12px;
+  left: -12px;
+}

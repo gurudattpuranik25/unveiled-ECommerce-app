@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Pacifico&family=Rubik+Moonrocks&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.home__page {
+  padding-top: 4rem;
+  width: 75%;
+  margin: auto;
+  min-height: 100vh;
+}
+
+.heading__quote {
+  text-align: center;
+  padding: 1rem;
+  font-size: 3.5rem;
+  font-family: "Pacifico", cursive;
+}
+
+.image__grid {
+  display: flex;
+  justify-content: space-between;
+}
+
+.image__grid img {
+  width: 49%;
+}
+
+.fashion__quote {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-size: 2.5rem;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.inline__style {
+  color: rgb(154, 36, 154);
+}
+
+.wear__confidence {
+  background-color: black;
+  width: 35%;
+  text-align: center;
+  text-overflow: 900;
+  margin: auto;
+  color: rgb(240, 240, 240);
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  border-radius: 50px;
+}
+
+.tags {
+  text-align: center;
+  font-size: 1.2rem;
+  color: rgb(99, 99, 99);
+}
+
+.man {
+  padding-bottom: 2rem;
+}
+
+.explore {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.collections {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  padding-bottom: 4rem;
+}
+
+.explore__btn {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border: 1px solid black;
+  padding: 0.1rem 1rem;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.explore__btn:hover {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
