@@ -7,7 +7,7 @@
 
 .cart__heading {
   font-size: 2.5rem;
-  padding-bottom: 1rem;
+  padding: 0.4rem 0;
   font-weight: 700;
   text-align: center;
 }
@@ -93,6 +93,7 @@
 .price__summary {
   background-color: rgb(255, 255, 255);
   width: 40%;
+  height: 20rem;
   padding: 1rem;
   border-radius: 5px;
 }
