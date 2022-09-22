@@ -64,3 +64,40 @@
   color: white;
   cursor: not-allowed;
 }
+
+@media (max-width: 1200px) {
+  .products__container {
+    width: 90%;
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+@media (max-width: 1140px) {
+  .products__grid {
+    grid-template-columns: repeat(3, 1fr);
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+@media (max-width: 845px) {
+  .products__grid {
+    grid-template-columns: repeat(2, 1fr);
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+@media (max-width: 450px) {
+  .products__grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .hero__tag {
+    font-size: 2rem;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .products__tagline {
+    font-size: 1rem;
+    transition: all 0.2s ease-in-out;
+  }
+}

@@ -10,8 +10,38 @@ import shoes from "../images/shoes.jpg";
 import shirts from "../images/shirts.jpg";
 import jeans from "../images/jeans.jpg";
 import { Link } from "react-router-dom";
+import { auth, provider } from "../firebase-config";
+import { setActiveUser, setUserLogoutState } from "../features/UserSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { signInWithPopup } from "firebase/auth";
 
 function Home() {
+  const dispatch = useDispatch();
+
+  const user = useSelector((state) => state.user);
+
+  const cartCount = useSelector((state) => state.cart.cartArray.length);
+
+  const handleLogin = () => {
+    signInWithPopup(auth, provider).then((result) => {
+      dispatch(
+        setActiveUser({
+          userName: result.user.displayName,
+          userEmail: result.user.email,
+          userImage: result.user.photoURL,
+        })
+      );
+    });
+  };
+  const handleLogout = () => {
+    auth
+      .signOut()
+      .then(() => {
+        dispatch(setUserLogoutState());
+      })
+      .catch((err) => alert(err.message));
+  };
+
   return (
     <div className="home__container">
       <div className="home__page">

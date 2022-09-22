@@ -63,7 +63,7 @@
 
 .menu__btn {
   font-size: 1.2rem;
-  /* display: none; */
+  display: none;
 }
 
 @media (max-width: 960px) {
