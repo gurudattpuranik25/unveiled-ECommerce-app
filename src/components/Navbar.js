@@ -54,7 +54,11 @@ function MenuDialog() {
             {cartCount}
           </span>
         </Link>
-        <button onClick={handleLogout}>Logout</button>
+        {user.userName === null ? (
+          ""
+        ) : (
+          <button onClick={handleLogout}>Logout</button>
+        )}
       </div>
     </div>
   );
