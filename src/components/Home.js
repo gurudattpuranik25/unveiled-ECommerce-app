@@ -30,7 +30,7 @@ function Home() {
           Unvieled brings you all the latest collections in both ethnic and
           Gen-Z trend.
         </p>
-        <p className=" tags">Style at your fingertips.</p>
+        <p className=" tags text-gray-800">Style at your fingertips.</p>
         <div className="explore">
           <p>COLLECTIONS</p>
           <Link className="explore__btn" to="/products">

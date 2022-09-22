@@ -60,3 +60,29 @@
   height: 2.5rem;
   border-radius: 50%;
 }
+
+.menu__btn {
+  font-size: 1.2rem;
+  /* display: none; */
+}
+
+@media (max-width: 960px) {
+  .search__input {
+    display: none;
+  }
+}
+
+@media (max-width: 770px) {
+  .nav__links {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .nav__links {
+    display: none;
+  }
+  .menu__btn {
+    display: block;
+  }
+}

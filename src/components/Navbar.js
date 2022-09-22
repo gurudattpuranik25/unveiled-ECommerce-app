@@ -72,7 +72,7 @@ function Navbar() {
           <button onClick={handleLogin}>Login</button>
         ) : (
           <div className="user__details">
-            <p>Hi, {user.userName} </p>
+            <p>{user.userName} </p>
             <img referrerPolicy="no-referrer" src={user.userImage} alt="" />
             <button onClick={handleLogout}>Logout</button>
           </div>
@@ -85,6 +85,9 @@ function Navbar() {
           </span>
         </Link>
       </div>
+      <button className="menu__btn">
+        <i className="fas fa-bars" />
+      </button>
     </div>
   );
 }

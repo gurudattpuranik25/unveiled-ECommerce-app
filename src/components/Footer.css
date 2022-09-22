@@ -13,3 +13,11 @@
   gap: 1rem;
   font-size: 1.5rem;
 }
+
+@media (max-width: 450px) {
+  .footer {
+    flex-direction: column;
+    padding: 0.8rem 0;
+    gap: 0;
+  }
+}

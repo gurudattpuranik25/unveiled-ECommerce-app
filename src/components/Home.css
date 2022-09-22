@@ -60,10 +60,6 @@
   color: rgb(99, 99, 99);
 }
 
-.man {
-  padding-bottom: 2rem;
-}
-
 .explore {
   padding: 2rem 0;
   display: flex;
@@ -93,4 +89,81 @@
 .explore__btn:hover {
   background-color: rgb(0, 0, 0);
   color: white;
+}
+
+@media (max-width: 1000px) {
+  .heading__quote {
+    font-size: 3rem;
+    transition: font-size 0.2s ease-in-out;
+  }
+  .fashion__quote {
+    font-size: 2rem;
+  }
+  .wear__confidence {
+    width: 40%;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 860px) {
+  .home__page {
+    width: 90%;
+  }
+  .heading__quote {
+    font-size: 2.5rem;
+    transition: font-size 0.2s ease-in-out;
+  }
+  .fashion__quote {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 740px) {
+  .heading__quote {
+    font-size: 2.2rem;
+    transition: font-size 0.2s ease-in-out;
+  }
+  .fashion__quote {
+    font-size: 1.5rem;
+  }
+  .wear__confidence {
+    width: 40%;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 645px) {
+  .heading__quote {
+    font-size: 2rem;
+    transition: font-size 0.2s ease-in-out;
+  }
+  .fashion__quote {
+    font-size: 1.2rem;
+  }
+  .wear__confidence {
+    width: 40%;
+    font-size: 1.2rem;
+  }
+  .explore {
+    font-size: 1.2rem;
+  }
+  .explore__btn {
+    font-size: 1.2rem;
+  }
+  .tags {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .wear__confidence {
+    width: 50%;
+    font-size: 1.2rem;
+  }
+  .explore {
+    font-size: 1rem;
+  }
+  .explore__btn {
+    font-size: 1rem;
+  }
 }
