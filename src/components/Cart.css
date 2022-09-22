@@ -154,6 +154,10 @@
     gap: 0.1rem;
     padding-right: 1rem;
   }
+  .cart__grid {
+    display: flex;
+    gap: 0.5rem;
+  }
 }
 
 @media (max-width: 475px) {
