@@ -101,7 +101,7 @@ function Address() {
                   placeholder="Card Number"
                   onChange={handleChange}
                   required
-                  className=" card__number"
+                  className="card__number"
                 />
                 <input
                   type="text"
@@ -109,6 +109,7 @@ function Address() {
                   placeholder="CVV"
                   onChange={handleChange}
                   required
+                  className="cvv"
                 />
               </div>
             </form>

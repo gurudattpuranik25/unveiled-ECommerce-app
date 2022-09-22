@@ -19,3 +19,9 @@
   width: 2.5rem;
   height: 2.5rem;
 }
+
+@media (max-width: 450px) {
+  .login__btn {
+    font-size: 1.5rem;
+  }
+}
