@@ -126,6 +126,9 @@
     width: 90%;
     transition: all 0.2s ease-in-out;
   }
+  .empty__cart img {
+    width: 25rem;
+  }
 }
 
 @media (max-width: 900px) {
@@ -138,6 +141,19 @@
   }
   .price__summary {
     width: 100%;
+  }
+  .empty__cart p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 625px) {
+  .empty__cart {
+    flex-direction: column;
+    text-align: center;
+  }
+  .empty__cart img {
+    width: 20rem;
   }
 }
 
