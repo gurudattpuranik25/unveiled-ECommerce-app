@@ -17,6 +17,7 @@ function Context({ children }) {
 
   useEffect(() => {
     getProducts();
+    // eslint-disable-next-line
   }, []);
 
   const searchHandler = (e) => {
