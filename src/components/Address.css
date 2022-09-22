@@ -1,23 +1,23 @@
-.cart__container {
+.order__container {
   padding: 4.5rem 0;
   width: 60%;
   margin: auto;
   min-height: 100vh;
 }
 
-.cart__heading {
+.order__heading {
   font-size: 2.5rem;
   padding: 0.4rem 0;
   font-weight: 700;
   text-align: center;
 }
 
-.cart__grid {
+.order__grid {
   display: flex;
   gap: 1rem;
 }
 
-.cart__items {
+.order__items {
   width: 60%;
   display: flex;
   flex-direction: column;
