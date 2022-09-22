@@ -104,4 +104,10 @@
     text-align: justify;
     font-size: 1.2rem;
   }
+  .address__form input {
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 0.6rem;
+    font-size: 1rem;
+  }
 }
