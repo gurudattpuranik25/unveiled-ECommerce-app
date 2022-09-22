@@ -154,7 +154,7 @@
     gap: 0.1rem;
     padding-right: 1rem;
   }
-  .cart__grid {
+  .cart__items {
     display: flex;
     gap: 0.5rem;
   }
