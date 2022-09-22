@@ -11,13 +11,13 @@ import "./Cart.css";
 function Cart() {
   const cartItems = useSelector((state) => state.cart.cartArray);
 
+  const user = useSelector((state) => state.user);
+
   const [total, setTotal] = useState(0);
 
   useEffect(() => {
     setTotal(cartItems.reduce((acc, cur) => acc + cur.quantity * cur.price, 0));
   }, [cartItems]);
-
-  console.log(cartItems);
 
   const dispatch = useDispatch();
 
@@ -93,7 +93,9 @@ function Cart() {
             </div>
             <hr />
             <div className=" checkout__btn">
-              <Link to="">Proceed to Checkout</Link>
+              <Link to={user.userName === null ? "/login" : "/address"}>
+                Proceed to Checkout
+              </Link>
             </div>
           </div>
         </div>

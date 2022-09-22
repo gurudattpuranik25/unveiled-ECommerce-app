@@ -1,14 +1,10 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { CommerceContext } from "./Context";
 import { auth, provider } from "../firebase-config";
 import { signInWithPopup } from "firebase/auth";
-import {
-  setActiveUser,
-  setUserLogoutState,
-  selectUserName,
-} from "../features/UserSlice";
+import { setActiveUser, setUserLogoutState } from "../features/UserSlice";
 import "./Navbar.css";
 
 function Navbar() {
@@ -17,22 +13,24 @@ function Navbar() {
   const cartCount = useSelector((state) => state.cart.cartArray.length);
 
   const dispatch = useDispatch();
-  const userName = useSelector(selectUserName);
 
-  useEffect(() => {
-    auth.onAuthStateChanged((authUser) => {
-      if (authUser) {
-        dispatch(
-          setActiveUser({
-            userName: authUser.displayName,
-            userEmail: authUser.email,
-          })
-        );
-      } else {
-        dispatch(setUserLogoutState());
-      }
-    });
-  }, []);
+  const user = useSelector((state) => state.user);
+  console.log(user);
+
+  // useEffect(() => {
+  //   auth.onAuthStateChanged((authUser) => {
+  //     if (authUser) {
+  //       dispatch(
+  //         setActiveUser({
+  //           userName: authUser.displayName,
+  //           userEmail: authUser.email,
+  //         })
+  //       );
+  //     } else {
+  //       dispatch(setUserLogoutState());
+  //     }
+  //   });
+  // }, []);
 
   const handleLogin = () => {
     signInWithPopup(auth, provider).then((result) => {
@@ -40,6 +38,7 @@ function Navbar() {
         setActiveUser({
           userName: result.user.displayName,
           userEmail: result.user.email,
+          userImage: result.user.photoURL,
         })
       );
     });
@@ -68,14 +67,17 @@ function Navbar() {
       <div className="nav__links">
         <Link to="/">Home</Link>
         <Link to="/products">Products</Link>
-        {userName ? (
-          <div className=" flex gap-5">
-            <p>Hi, {userName.toUpperCase()}</p>
+
+        {user.userName === null ? (
+          <button onClick={handleLogin}>Login</button>
+        ) : (
+          <div className="user__details">
+            <p>Hi, {user.userName} </p>
+            <img referrerPolicy="no-referrer" src={user.userImage} alt="" />
             <button onClick={handleLogout}>Logout</button>
           </div>
-        ) : (
-          <button onClick={handleLogin}>Login</button>
         )}
+
         <Link to="/cart" className=" cart__icon">
           <i className="fa-solid fa-cart-shopping"></i>
           <span className=" cart__count w-[1.5rem] h-[1.5rem] bg-rose-500 text-white flex justify-center items-center rounded-full ">

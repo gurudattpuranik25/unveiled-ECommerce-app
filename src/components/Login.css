@@ -1,0 +1,21 @@
+.login__container {
+  padding: 20rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.login__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  gap: 1rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 0 1rem;
+}
+
+.google__logo {
+  width: 2.5rem;
+  height: 2.5rem;
+}

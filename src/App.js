@@ -8,6 +8,8 @@ import Context from "./components/Context";
 import ProductPage from "./components/ProductPage";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
+import Address from "./components/Address";
+import Login from "./components/Login";
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
             <Route path="/products" element={<Products />} />
             <Route path="/cart" element={<Cart />} />
             <Route path={`/productPage/:productId`} element={<ProductPage />} />
+            <Route path={"/address"} element={<Address />} />
+            <Route path={"/login"} element={<Login />} />
           </Routes>
         </div>
         <Footer />
