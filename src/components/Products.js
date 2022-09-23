@@ -1,23 +1,37 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./Products.css";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../features/cartSlice";
 import { CommerceContext } from "./Context";
 import { Link } from "react-router-dom";
+import { db } from "../firebase-config";
+import { collection, getDocs } from "firebase/firestore";
 
 function Products() {
   const { searchItem, products, setProducts } = useContext(CommerceContext);
+
+  const [x, setX] = useState([]);
+
+  const productCollectionRef = collection(db, "products");
+
+  const getProducts = async () => {
+    const data = await getDocs(productCollectionRef);
+    setX(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+  };
+
+  useEffect(() => {
+    getProducts();
+    // eslint-disable-next-line
+  }, []);
 
   const cartItems = useSelector((state) => state.cart.cartArray);
 
   const dispatch = useDispatch();
 
   const handleCategory = (selectedCategory) => {
-    if (selectedCategory === "all") setProducts(products);
+    if (selectedCategory === "all") setProducts(x);
     else {
-      setProducts(
-        products.filter((item) => item.category === selectedCategory)
-      );
+      setProducts(x.filter((item) => item.category === selectedCategory));
     }
   };
 
