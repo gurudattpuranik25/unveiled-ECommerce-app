@@ -21,26 +21,28 @@ function ProductPage() {
             <div className="details">
               <h1>{selectedItem.title}</h1>
               <hr />
-              <p>{selectedItem.description}</p>
+              <p className="description">{selectedItem.description}</p>
               <p>⭐{selectedItem.rating}</p>
 
               <p>$ {selectedItem.price}</p>
-              <p className="text-gray-400 ">Inclusive of all taxes</p>
-              <div className=" flex mt-4 gap-6">
-                <div className=" flex flex-col items-center gap-1">
+              <p className=" text-gray-400 " id="tax__tag">
+                Inclusive of all taxes
+              </p>
+              <div className="  flex mt-4 gap-6">
+                <div className=" delivery__details flex flex-col items-center gap-1">
                   <i className="fa-solid fa-arrow-rotate-left"></i>
                   <span className=" text-center text-blue-700 font-semibold">
                     10 days <br /> returnable
                   </span>
                 </div>
-                <div className=" flex flex-col items-center gap-1">
+                <div className=" delivery__details flex flex-col items-center gap-1">
                   <i className="fa-solid fa-truck"></i>
                   <span className=" text-center text-blue-700 font-semibold">
                     Unveiled
                     <br /> Delivered
                   </span>
                 </div>
-                <div className=" flex flex-col items-center gap-1">
+                <div className=" delivery__details flex flex-col items-center gap-1">
                   <i className="fa-solid fa-building-circle-check"></i>
                   <span className=" text-center text-blue-700 font-semibold">
                     No-Contact <br /> Delivery
