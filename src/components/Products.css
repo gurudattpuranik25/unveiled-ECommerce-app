@@ -24,7 +24,7 @@
   justify-content: center;
   gap: 1rem;
   padding-bottom: 1rem;
-  display: none;
+  /* display: none; */
 }
 
 .category__btn button {
@@ -37,7 +37,8 @@
   transition: all 0.2s;
 }
 
-.category__btn button:hover {
+.category__btn button:hover,
+.category__btn button:focus {
   background-color: black;
   color: white;
 }
@@ -107,6 +108,17 @@
     grid-template-columns: repeat(2, 1fr);
     transition: all 0.2s ease-in-out;
   }
+  .category__btn button {
+    padding: 0.3rem 1rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .category__btn button {
+    padding: 0.3rem 0.5rem;
+    font-size: 0.8rem;
+  }
 }
 
 @media (max-width: 450px) {
@@ -118,9 +130,13 @@
     font-size: 2rem;
     transition: all 0.2s ease-in-out;
   }
-
   .products__tagline {
     font-size: 1rem;
+    transition: all 0.2s ease-in-out;
+  }
+  .category__btn {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     transition: all 0.2s ease-in-out;
   }
 }
