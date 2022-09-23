@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "./Products.css";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../features/cartSlice";
@@ -6,11 +6,20 @@ import { CommerceContext } from "./Context";
 import { Link } from "react-router-dom";
 
 function Products() {
-  const { searchItem, products } = useContext(CommerceContext);
+  const { searchItem, products, setProducts } = useContext(CommerceContext);
 
   const cartItems = useSelector((state) => state.cart.cartArray);
 
   const dispatch = useDispatch();
+
+  const handleCategory = (selectedCategory) => {
+    if (selectedCategory === "all") setProducts(products);
+    else {
+      setProducts(
+        products.filter((item) => item.category === selectedCategory)
+      );
+    }
+  };
 
   return (
     <div className="products__container">
@@ -18,6 +27,14 @@ function Products() {
       <p className="products__tagline">
         Choose from wide range of products across styles.
       </p>
+      <div className="category__btn">
+        <button onClick={() => handleCategory("all")}>All</button>
+        <button onClick={() => handleCategory("sarees")}>Saree</button>
+        <button onClick={() => handleCategory("kurtas")}>Kurta</button>
+        <button onClick={() => handleCategory("shoes")}>Formal Shoes</button>
+        <button onClick={() => handleCategory("shirts")}>Shirts</button>
+        <button onClick={() => handleCategory("jeans")}>Jeans</button>
+      </div>
       <div className="products__grid ">
         {products
           // eslint-disable-next-line

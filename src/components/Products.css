@@ -19,6 +19,28 @@
   color: rgb(99, 99, 99);
 }
 
+.category__btn {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+
+.category__btn button {
+  background-color: white;
+  color: black;
+  border: 2px solid gray;
+  border-radius: 5px;
+  padding: 0.5rem 1.5rem;
+  font-size: 1.2rem;
+  transition: all 0.2s;
+}
+
+.category__btn button:hover {
+  background-color: black;
+  color: white;
+}
+
 .products__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

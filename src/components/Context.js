@@ -28,6 +28,7 @@ function Context({ children }) {
     searchItem,
     searchHandler,
     products,
+    setProducts,
   };
 
   return (
