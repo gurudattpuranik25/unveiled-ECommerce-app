@@ -22,7 +22,7 @@ function ProductPage() {
               <h1>{selectedItem.title}</h1>
               <hr />
               <p className="description">{selectedItem.description}</p>
-              <p>⭐{selectedItem.rating}</p>
+              <p>⭐ {selectedItem.rating}</p>
 
               <p>$ {selectedItem.price}</p>
               <p className=" text-gray-400 " id="tax__tag">
