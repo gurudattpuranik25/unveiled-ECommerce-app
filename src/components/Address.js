@@ -40,16 +40,6 @@ function Address() {
       alert("Please provide your 12 digit card number");
     else if (formData.cvv.length !== 3)
       alert("Please provide the correct cvv number");
-    // if (
-    //   formData.name === "" ||
-    //   formData.email === "" ||
-    //   formData.phoneNumber === "" ||
-    //   formData.address === "" ||
-    //   formData.pincode === "" ||
-    //   formData.cardNumber === "" ||
-    //   formData.cvv === ""
-    // ) {
-    // alert("Please enter correct address/payment details");}
     else {
       setSummary(
         `Payment successful 😇.Your shipment will be delivered to ${formData.name}, ${formData.address} - ${formData.pincode}. `
