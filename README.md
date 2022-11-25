@@ -5,7 +5,7 @@ Unveiled is an e-commerce application that sells clothes and other accessories t
 This application is built using React framework and has the following functionalities,
 
 1. View the products
-2. Add the items to cart
+2. Add items to cart
 3. Vary the quantity of items in the cart with dynamic change in the total amount
 4. Remove items from cart
 5. Firebase google authentication
